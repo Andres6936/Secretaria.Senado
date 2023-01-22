@@ -1,9 +1,9 @@
 import express, {Express, Request, Response} from 'express'
 import ReactDOMServer from 'react-dom/server';
 import React from "react";
-import {Template} from "./Template.js";
 import fs from "fs";
 import {DOMParser} from "@xmldom/xmldom";
+import {Template} from "./src/Template";
 
 function getDocumentFromFile(): Document | null {
     try {

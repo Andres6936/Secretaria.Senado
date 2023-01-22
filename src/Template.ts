@@ -1,9 +1,5 @@
 import React, {useEffect} from "react";
 
-interface Props {
-    document: Document | null
-}
-
 export function Template() {
     useEffect(() => {
         console.log('Server Side Rendering')

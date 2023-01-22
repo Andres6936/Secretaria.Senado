@@ -6,7 +6,7 @@ import {ParserXML} from "./module/parser/ParserXML.js";
 import {TypeEvent} from "./module/parser/TypeEvent.js";
 import {RenameFiles} from "./module/parser/RenameFiles.js";
 import {RemoverTags} from "./module/parser/RemoverTags.js";
-import {startServer} from "./module/server/App.js";
+import {startServer} from "./server";
 
 const PARENT_DIRECTORY = "Input/"
 
