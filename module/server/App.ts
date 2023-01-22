@@ -20,13 +20,14 @@ export function startServer() {
     const app: Express = express()
     const port = 5100;
 
+    app.use(express.static('public'))
+
     app.get('/', (req: Request, res: Response) => {
         let errorProcessingStream = false
         const stream = ReactDOMServer.renderToPipeableStream(
-            React.createElement(Template, {
-                document: getDocumentFromFile(),
-            }),
+            React.createElement(Template),
             {
+                bootstrapModules: ['/main.js'],
                 onShellReady() {
                     res.statusCode = errorProcessingStream ? 501 : 200
                     res.set('Content-Type', 'text/html')
